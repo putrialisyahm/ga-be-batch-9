@@ -1,8 +1,9 @@
-// variable
-// data type
-// operator
-// conditional
-// function
+// variable - DONE
+// data type - DONE
+// function - DONE
+// conditional - DONE
+// operator - DONE
+// comparation
 // looping
 // data collection (Array, Object)
 // truthy and falsy value
@@ -95,4 +96,68 @@ let user = {
 // array method (indexOf, slice, splice dkk.)
 
 let arr = ["ilham", "eka", "seli", "wawan"];
-console.log(arr[2]);
+// console.log(arr[2]);
+
+const Pi = 3.14;
+
+let tabularArea = Pi * 5 ** 2;
+
+// function
+// expression, declaration
+// hoisting
+
+// expression
+function countMax(number1, number2) {
+  let min =
+    "Nilai terkecil adalah: " +
+    number1 +
+    "dan nilai terkecil adalah " +
+    number2;
+  // let max = "Nilai terbesar adalah: " + number2;
+  let max = `Nilai terbesar adalah ${number2} dan nilai terkecil adalah ${number1}`;
+  // a;
+  // b;
+  return max;
+}
+
+let sol = countMax(1, 2);
+// countMax();
+// console.log(sol);
+
+// declaration
+let countMaxDec = function () {};
+
+// arrow function ES6
+let countMaxArrow = () => {};
+
+// conditional
+let var1 = 2;
+let var2 = 1;
+
+// ===, strict equal, VALUE & DATA TYPE nya harus SAMA
+// ==, VALUE nya harus sama
+if (var1 === 1) {
+  // true
+  console.log("Bener nih!");
+}
+// else if (var1 === 0) {
+//   console.log("Nilainya nol!");
+// } else if (var1 === 2) {
+//   console.log("Nilainya dua!");
+// }
+else {
+  // false
+  console.log("Bukan");
+}
+
+// ternary operator
+var1 === 1
+  ? console.log("bener nih!")
+  : var1 === 0
+  ? console.log("nilainya nol!")
+  : console.log("Bukan!");
+
+var1 === 2 ? console.log("duaa") : console.log("bukann");
+
+// comparation
+// && || > < >= <=
