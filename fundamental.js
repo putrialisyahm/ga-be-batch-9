@@ -3,8 +3,8 @@
 // function - DONE
 // conditional - DONE
 // operator - DONE
-// comparation
-// looping
+// comparation - DONE
+// looping - DONE
 // data collection (Array, Object)
 // truthy and falsy value
 // debug
@@ -136,28 +136,105 @@ let var2 = 1;
 
 // ===, strict equal, VALUE & DATA TYPE nya harus SAMA
 // ==, VALUE nya harus sama
-if (var1 === 1) {
-  // true
-  console.log("Bener nih!");
-}
-// else if (var1 === 0) {
-//   console.log("Nilainya nol!");
-// } else if (var1 === 2) {
-//   console.log("Nilainya dua!");
+// if (var1 === 1) {
+//   // true
+//   console.log("Bener nih!");
 // }
-else {
-  // false
-  console.log("Bukan");
-}
+// // else if (var1 === 0) {
+// //   console.log("Nilainya nol!");
+// // } else if (var1 === 2) {
+// //   console.log("Nilainya dua!");
+// // }
+// else {
+//   // false
+//   console.log("Bukan");
+// }
 
 // ternary operator
-var1 === 1
-  ? console.log("bener nih!")
-  : var1 === 0
-  ? console.log("nilainya nol!")
-  : console.log("Bukan!");
+// var1 === 1
+//   ? console.log("bener nih!")
+//   : var1 === 0
+//   ? console.log("nilainya nol!")
+//   : console.log("Bukan!");
 
-var1 === 2 ? console.log("duaa") : console.log("bukann");
+// var1 === 2 ? console.log("duaa") : console.log("bukann");
 
 // comparation
 // && || > < >= <=
+
+// review conditional
+// jika hari ini senin  > makan ayam
+// hari ini selasa > makan ikan
+// hari kamis dan hari itu hujan  dan hari itu juga ada pelangi> makan indomie
+// selain hari di atas > makan tempe
+
+// let hari = "senin"; // assignment
+// let hujan = false;
+// let pelangi = true;
+
+// if (hari === "senin") {
+//   console.log("makan ayam");
+// } else if (hari === "selasa") {
+//   console.log("makan ikan");
+// } else if (hari === "kamis" && hujan === true && pelangi === true) {
+//   console.log("makan indomie");
+// } else {
+//   console.log("makan tempe");
+// }
+
+// true && false > false
+// true || false > true
+
+// looping
+// print angka 1 - 10
+
+// for("start"; "stop"; "step") {
+// }
+
+for (let i = 0; i <= 5; i++) {
+  // console.log(i, "-i");
+  // if (i === 20 || i === 35) {
+  //   console.log(i, "saat -i 20 atau 35");
+  // }
+  // saat i nya bukan 3, print "bukan tiga". selain itu, "tiga"
+  // ternary operator
+  // condition ? true : false
+  // i !== 3 ? console.log(i, "bukan tiga") : console.log(i, "tiga");
+  // if (i !== 3) {
+  //   console.log("bukan tiga");
+  // } else if (i === 2) {
+  //   console.log("dua");
+  // } else {
+  //   console.log("tiga");
+  // }
+  // basic conditional
+  // if (condition) {true}
+  // else {false}
+}
+
+// data collection
+// object > key, value
+// array > index
+
+let student = {
+  name: "seli",
+  gender: "female",
+  class: "backend",
+  dream: "ibu rumah tangga",
+  noHp: 2364975623987,
+  login: function () {
+    "login";
+  },
+  chat: function () {
+    "chat";
+  },
+};
+
+let studentNames = ["seli", "putri", "wawan", "eka"];
+
+console.log(student.name);
+console.log(student.dream);
+// console.log(student.address ? student.address : "ga ada nih");
+
+studentArr.splice(2, 1);
+console.log(studentArr);
