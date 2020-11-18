@@ -5,8 +5,8 @@
 // operator - DONE
 // comparation - DONE
 // looping - DONE
-// data collection (Array, Object)
-// truthy and falsy value
+// data collection (Array, Object) - DONE
+// truthy and falsy value - DONE
 // debug
 // scope (local, function, global)
 
@@ -230,11 +230,68 @@ let student = {
   },
 };
 
+let readline = {
+  open: function open() {},
+  close: function close() {},
+};
+
+readline.close();
+
 let studentNames = ["seli", "putri", "wawan", "eka"];
 
-console.log(student.name);
-console.log(student.dream);
+// console.log(student.name);
+// console.log(student.dream);
 // console.log(student.address ? student.address : "ga ada nih");
 
 studentArr.splice(2, 1);
-console.log(studentArr);
+// console.log(studentArr);
+
+// truthy value
+
+// true
+// {}
+// []
+// 42
+// "0"
+// "false"
+// new Date(
+// -42
+// 12n
+// 3.14
+// -3.14
+// Infinity
+// -Infinity
+
+// falsy value
+
+// false
+// null
+// undefined
+// 0
+// -0
+// 0n
+// NaN
+// ""
+
+// if (condition) { condition = true}
+// else { condition = false
+
+// review conditional
+// jika hari ini senin  > makan ayam
+// hari ini selasa > makan ikan
+// hari kamis dan hari itu hujan  dan hari itu juga ada pelangi> makan indomie
+// selain hari di atas > makan tempe
+
+let hari = "senin"; // assignment
+let hujan = 1;
+let pelangi = 0;
+
+if (hari === "senin") {
+  console.log("makan ayam");
+} else if (hari === "selasa") {
+  console.log("makan ikan");
+} else if (hari === "kamis" && hujan === true && pelangi) {
+  console.log("makan indomie");
+} else {
+  console.log("makan tempe");
+}
