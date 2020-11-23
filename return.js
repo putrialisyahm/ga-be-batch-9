@@ -16,3 +16,5 @@ function operation(num1, num2) {
 
 let solve = operation(0, 3);
 console.log(solve);
+
+// name= "           putri                 alisyah              " > trim() > "putri alisyah"
