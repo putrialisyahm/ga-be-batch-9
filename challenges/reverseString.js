@@ -15,4 +15,14 @@ function reverseStr(str) {
 }
 
 let sol1 = reverseStr("selirose"); // esoriles
-console.log(sol1);
+// console.log(sol1);
+
+var x = new Array(10);
+
+for (var i = 0; i < x.length; i++) {
+  x[i] = new Array(3);
+}
+
+
+
+console.log(x);
