@@ -15,8 +15,6 @@ let input = [
   8654,
 ];
 
-generateReport(input);
-
 function generateReport(arr) {
   let result = {
     sum: 0,
@@ -43,6 +41,7 @@ function generateReport(arr) {
 
   // max
   result.max = arr[arr.length - 1];
+
   // min
   result.min = arr[0];
 
