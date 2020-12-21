@@ -2,9 +2,9 @@ let data = [
   {
     profilePhoto:
       "https://res.cloudinary.com/di02ey9t7/image/upload/v1602390817/kxnw44tsirdxfg8jafkv.jpg",
-    posts: [],
+    posts: [], // 0
     likes: [],
-    meetings: [],
+    meetings: [], // "Tidak ada"
     _id: "5f7f3818fd6f3fd3b5b24dbc",
     email: "idrus@gmail.com",
     password: "$2b$10$ac33IXGYKSE0iz8aBzmfNOqZzvMQkQThIlnADCza1oQRpzAKKg0Ii",
@@ -16,7 +16,7 @@ let data = [
   {
     profilePhoto:
       "https://res.cloudinary.com/drovood07/image/upload/v1574847777/uploads/doctor_xp3dmi.png",
-    posts: ["5fbe6e6b9b10800017d2823a", "5fbe71a39b10800017d2825e"],
+    posts: ["5fbe6e6b9b10800017d2823a", "5fbe71a39b10800017d2825e"], // 2
     likes: ["5f9507ea39e07f1ef2fc49b4"],
     meetings: [],
     _id: "5f828c43c632cc2d1fb94605",
@@ -174,7 +174,6 @@ let data = [
     email: "nana@gmail.com",
     password: "$2b$10$9XXEyoI.nUeEwwqnFX4QbuV.9JJycXZfkXUTV2k9Y37BMa2UMisva",
     fullName: "nana",
-    mobileNumber: "08543891",
     createdAt: "2020-11-19T12:51:02.577Z",
     updatedAt: "2020-11-19T12:51:02.577Z",
     __v: 0,
@@ -209,31 +208,64 @@ let data = [
   },
 ];
 
-// user yang punya fullName lebih dari 4 karakter
-// for konvensional
-let arrFor = [];
-for (let i = 0; i < data.length; i++) {
-  if (data[i].fullName && data[i].fullName.length > 4) {
-    arrFor.push(data[i]);
+// let user = {
+//   review: [1, 2, 3, 4, 5, 6],
+//   genre: [1, 2, 3, 4, 5, 6],
+// };
+
+// ngereview
+// params > 2
+// get /params/query
+// post/put body
+// upload.single > req.file
+
+// if (user.review.indexOf(req.params.id)) {
+//   return res.status(400).json("Udah review woi!");
+// }
+
+// generate report
+// map
+// e.g. output
+
+let Mapping = (el, index) => {
+  let counterFullName = 0;
+  if (el.fullName) {
+    counterFullName += 1;
   }
-}
-// console.log(arrFor);
-// for of
-let arrForOf = [];
-for (let el of data) {
-  if (el.fullName && el.fullName.length > 4) arrForOf.push(el);
-}
-// console.log(arrForOf);
-// filter
-let arrFilter = data.filter((el) => el.fullName && el.fullName.length > 4);
-// console.log(arrFilter);
 
-// user yang dibuat setelah tanggal 19 oktober 2020 dan dia punya post minimal 1
-// for konvensional
-// for of
-// filter
+  let counterMobileNumber = 0;
+  if (el.mobileNumber) {
+    counterMobileNumber += 1;
+  }
 
-// user yang mobile Numbernya sama
-// for konvensional
-// for of
-// filter
+  let fullName = el.fullName ? el.fullName : "Anonim";
+
+  let userCode = el.email.substr(0, 4) + index;
+
+  let even = false;
+  if (index % 2 == 0) {
+    even = true;
+  }
+
+  return {
+    totalUsers: data.length,
+    totalUserWithFullName: counterFullName,
+    totalUserWithMobileNumber: counterMobileNumber,
+    fullName: fullName,
+    userCode: userCode,
+    even: even,
+  };
+};
+
+let filteredByUsername = () => {};
+
+let filteredByEmail = () => {};
+
+let isFilteredUsername = true;
+if (isFilteredUsername) {
+  data.filter(filteredByUsername);
+}
+
+let report = data.map(Mapping);
+
+console.log(report);
